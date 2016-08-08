@@ -12,11 +12,19 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIImagePickerContr
 UINavigationControllerDelegate, ScancodeDelegate {
     @IBOutlet weak var galleryScrollView: UIScrollView!
     @IBOutlet weak var galleryPageControl: UIPageControl!
-    
-    @IBOutlet weak var vertialScrollView: UIScrollView!
+    @IBOutlet weak var hotTopContainerView: UIView!
     
     var timer:NSTimer!
     var currentPage = 0
+    
+    
+    var hotTopicView1: BannerView!
+    var hotTopicView2: BannerView!
+    var hotTopicViews = [BannerView]()
+    
+    
+    let upOrigin = CGPointMake(0, 0)
+    let downOrigin = CGPointMake(0, 60)
     
     
     override func viewDidLoad() {
@@ -25,7 +33,41 @@ UINavigationControllerDelegate, ScancodeDelegate {
         pictureGallery()
         addTimer()
         
+        initBanner()
     }
+    
+    func initBanner(){
+        hotTopicView1 = NSBundle.mainBundle().loadNibNamed("BannerView", owner: nil, options: nil).first as! BannerView
+        hotTopicView1.frame.origin = upOrigin
+        hotTopicView1.content1Label.text = "1.学生收无效毕业证"
+        hotTopicView1.content2Label.text = "2.中国游客被扔石头"
+        
+        hotTopicView2 = NSBundle.mainBundle().loadNibNamed("BannerView", owner: nil, options: nil).first as! BannerView
+        hotTopicView2.frame.origin = downOrigin
+        hotTopicView2.content1Label.text = "3.吴秀波娇妻曝光"
+        hotTopicView2.content2Label.text = "4.澳洲记者抹黑孙杨"
+        
+        hotTopContainerView.addSubview(hotTopicView1)
+        hotTopContainerView.addSubview(hotTopicView2)
+        
+        hotTopicViews.append(hotTopicView1)
+        hotTopicViews.append(hotTopicView2)
+        scrollHotTopics()
+    }
+    
+    func scrollHotTopics() {
+        UIView.animateWithDuration(2.0, animations: {
+            self.hotTopicViews[0].frame.origin = CGPointMake(0, -60)
+            self.hotTopicViews[1].frame.origin = CGPointMake(0, 0)
+        }) { (_) in
+            self.hotTopicViews.append(self.hotTopicViews[0])
+            self.hotTopicViews[2].frame.origin = CGPointMake(0, 60)
+            self.hotTopicViews.removeAtIndex(0)
+            
+            self.scrollHotTopics()
+        }
+    }
+
     
     
     override func didReceiveMemoryWarning() {

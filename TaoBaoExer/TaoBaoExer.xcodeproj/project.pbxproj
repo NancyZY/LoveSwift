@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B935F9361D534A7200FD7EB3 /* Color+Extension.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = B935F9351D534A7100FD7EB3 /* Color+Extension.swift .swift */; };
+		B98BF84A1D54CED50047B07F /* BannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98BF8491D54CED50047B07F /* BannerView.xib */; };
+		B98BF84C1D54CFF30047B07F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BF84B1D54CFF30047B07F /* BannerView.swift */; };
 		B9E55BA61D51AF3300D0BD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E55BA51D51AF3300D0BD77 /* AppDelegate.swift */; };
 		B9E55BA81D51AF3300D0BD77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E55BA71D51AF3300D0BD77 /* ViewController.swift */; };
 		B9E55BAB1D51AF3300D0BD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E55BA91D51AF3300D0BD77 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		B935F9351D534A7100FD7EB3 /* Color+Extension.swift .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift .swift"; sourceTree = "<group>"; };
+		B98BF8491D54CED50047B07F /* BannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerView.xib; sourceTree = "<group>"; };
+		B98BF84B1D54CFF30047B07F /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B9E55BA21D51AF3300D0BD77 /* TaoBaoExer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoBaoExer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E55BA51D51AF3300D0BD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E55BA71D51AF3300D0BD77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				B9E55BB91D51DA7100D0BD77 /* ScanViewController.swift */,
 				B9E55BBB1D51E45C00D0BD77 /* TakePhotoViewController.swift */,
 				B935F9351D534A7100FD7EB3 /* Color+Extension.swift .swift */,
+				B98BF8491D54CED50047B07F /* BannerView.xib */,
+				B98BF84B1D54CFF30047B07F /* BannerView.swift */,
 			);
 			path = TaoBaoExer;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98BF84A1D54CED50047B07F /* BannerView.xib in Resources */,
 				B9E55BB01D51AF3300D0BD77 /* LaunchScreen.storyboard in Resources */,
 				B9E55BAD1D51AF3300D0BD77 /* Assets.xcassets in Resources */,
 				B9E55BAB1D51AF3300D0BD77 /* Main.storyboard in Resources */,
@@ -148,6 +155,7 @@
 				B9E55BA81D51AF3300D0BD77 /* ViewController.swift in Sources */,
 				B935F9361D534A7200FD7EB3 /* Color+Extension.swift .swift in Sources */,
 				B9E55BA61D51AF3300D0BD77 /* AppDelegate.swift in Sources */,
+				B98BF84C1D54CFF30047B07F /* BannerView.swift in Sources */,
 				B9E55BBC1D51E45C00D0BD77 /* TakePhotoViewController.swift in Sources */,
 				B9E55BBA1D51DA7100D0BD77 /* ScanViewController.swift in Sources */,
 			);
